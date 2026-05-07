@@ -1,0 +1,24 @@
+.Button {
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+.clear {
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    background: none;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.outline {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    background-color: #fff;
+    color: #000;
+}
