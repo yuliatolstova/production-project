@@ -1,7 +1,7 @@
-import HtmlWebpackPlugin from "html-webpack-plugin";
-import webpack, { DefinePlugin, HotModuleReplacementPlugin } from "webpack";
-import {BuildOptions} from "./types/config";
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import webpack, { DefinePlugin, HotModuleReplacementPlugin } from 'webpack';
+import {BuildOptions} from './types/config';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 // const ReactRefreshPlugin = require( 'react-refresh-webpack-plugin' )
 
 export function buildPlugins({paths, isDev}: BuildOptions): webpack.WebpackPluginInstance[] {

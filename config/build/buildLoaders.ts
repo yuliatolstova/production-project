@@ -1,6 +1,6 @@
-import webpack from "webpack";
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import {BuildOptions} from "./types/config";
+import webpack from 'webpack';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import {BuildOptions} from './types/config';
 
 export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
 
@@ -9,7 +9,7 @@ export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
         use: [
             isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
             {
-                loader: "css-loader",
+                loader: 'css-loader',
                 options: {
                     modules: {
                         auto: (resPath: string) => Boolean(resPath.includes('.module.')),
@@ -19,7 +19,7 @@ export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
                     },
                 }
             },
-            "sass-loader",
+            'sass-loader',
         ],
     }
 
