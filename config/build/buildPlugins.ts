@@ -2,7 +2,7 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 import webpack, { DefinePlugin, HotModuleReplacementPlugin } from "webpack";
 import {BuildOptions} from "./types/config";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
-const ReactRefreshPlugin = require( 'react-refresh-webpack-plugin' )
+// const ReactRefreshPlugin = require( 'react-refresh-webpack-plugin' )
 
 export function buildPlugins({paths, isDev}: BuildOptions): webpack.WebpackPluginInstance[] {
 
@@ -21,7 +21,7 @@ export function buildPlugins({paths, isDev}: BuildOptions): webpack.WebpackPlugi
     ]
 
     if(isDev) {
-        plugins.push(new ReactRefreshPlugin())
+        // plugins.push(new ReactRefreshPlugin())
         plugins.push(new HotModuleReplacementPlugin())
     }
 

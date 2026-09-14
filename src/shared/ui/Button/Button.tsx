@@ -1,5 +1,5 @@
 import cls from './Button.module.scss';
-import { classNames } from 'shared/lib/classNames';
+import { classNames } from 'shared/lib/classNames/classNames';
 
 export enum ButtonTheme {
     CLEAR = 'clear',
