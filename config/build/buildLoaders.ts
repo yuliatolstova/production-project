@@ -50,21 +50,29 @@ export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
         exclude: /node_modules/,
         use: {
             loader: 'babel-loader',
-            presets: ['@babel/presets-env'],
-            plugins: [
-                ['i18next-extract', {
-                    locales: ['ru', 'en'],
-                    keyAsDefaultValue: true,
-                }]
-            ]
-        }
+            options: {
+                presets: [
+                    '@babel/preset-env',
+                    '@babel/preset-react',
+                    '@babel/preset-typescript',
+                ],
+                plugins: [
+                    ['i18next-extract', {
+                        locales: ['ru', 'en'],
+                        keyAsDefaultValue: true,
+                        outputPath: 'public/locales/{{locale}}/{{ns}}.json',
+                        jsonSpace: 4,
+                    }],
+                ],
+            },
+        },
     }
 
     return [
         fileLoader,
         svgLoader,
+        babelLoader,
         typescriptLoader,
-        // babelLoader,
         cssLoader,
     ]
 }

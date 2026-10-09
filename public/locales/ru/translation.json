@@ -1,3 +1,10 @@
 {
-    "lang": "Русский"
+    "aboutPageTitle": "aboutPageTitle",
+    "description": "description",
+    "lang": "Русский",
+    "mainPageTitle": "mainPageTitle",
+    "title": "title",
+    "toggle": "toggle",
+    "Обновить страницу": "Обновить страницу",
+    "Произошла ошибка": "Произошла ошибка"
 }
